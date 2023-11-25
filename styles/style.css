@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@500&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Montserrat, sans-serif;
+}
+
+header nav {
+  align-items: center;
+  background-color: #2fbc54;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  color: #fff;
+  display: flex;
+  height: 90px;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+header nav .logo {
+  display: flex;
+  flex-direction: row;
+  font-family: Poppins, sans-serif;
+  letter-spacing: 1px;
+  align-items: center;
+  margin-left: 20px;
+}
+.logo-company {
+  height: 80px;
+}
+.label-company {
+  margin-left: 30px;
+}
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  width: 35%;
+  margin-right: 50px;
+}
+header nav ul li a {
+  color: #fff;
+  font-size: 1em;
+  text-decoration: none;
+}
+header nav ul li a:hover {
+  font-weight: bolder;
+}
+#content {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+.one-card {
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-flow: column wrap;
+  margin-top: 10px;
+  padding: 80px;
+}
+.teks-satu {
+  text-align: justify;
+}
+.text-satu {
+  margin-top: 40px;
+}
+.gambar-pertama {
+  object-fit: cover;
+  object-position: top;
+  width: 30%;
+}
+.one-card > h3,
+.one-card > p {
+  padding-top: 10px;
+}
+.gambar-kedua {
+  width: 30%;
+}
+.teks-dua {
+  text-align: justify;
+}
+.text-dua {
+  margin-top: 40px;
+}
+.two-card {
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-flow: column wrap;
+  margin-top: 10px;
+  padding: 80px;
+}
+.two-card > h2,
+.two-card > p {
+  padding-top: 10px;
+}
+.three-card {
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-flow: column wrap;
+  margin-top: 10px;
+  padding: 80px;
+}
+.teks-tiga {
+  text-align: justify;
+}
+.text-tiga {
+  margin-top: 40px;
+}
+.gambar-ketiga {
+  width: 30%;
+}
+.three-card > h2,
+.three-card > p {
+  padding-top: 10px;
+}
+
+.gambar-saya {
+  border-radius: 10%;
+  width: 150px;
+}
+.luruskan-table {
+  align-content: space-evenly;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-flow: column wrap;
+  margin-bottom: 5px;
+}
+.luruskan-tulisan {
+  text-align: justify;
+  padding: 50px;
+}
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+.menu-toggle input {
+  cursor: pointer;
+  height: 28px;
+  left: -6px;
+  opacity: 0;
+  position: absolute;
+  top: -3px;
+  width: 40px;
+  z-index: 2;
+}
+.menu-toggle span {
+  background-color: #dbfbdd;
+  border-radius: 3px;
+  display: block;
+  height: 3px;
+  transition: all 0.5s;
+  width: 28px;
+}
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+.menu-toggle span:last-child {
+  transform-origin: 0 100%;
+}
+.menu-toggle input:checked ~ span:nth-child(2) {
+  background-color: #fff;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+.menu-toggle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0);
+}
+.menu-toggle input:checked ~ span:last-child {
+  background-color: #fff;
+  transform: rotate(-45deg) translate(-1px);
+}
+
+footer {
+  background-color: #2fbc54;
+  color: #fff;
+  font-weight: 700;
+  padding: 20px;
+  text-align: center;
+}
+@media screen and (max-width: 1168px) {
+  header nav ul {
+    width: 50%;
+  }
+  .gambar-pertama {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 768px) {
+  header nav ul {
+    width: 50%;
+  }
+  .gambar-pertama {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 576px) {
+  header {
+    width: 100%;
+  }
+  header nav {
+    justify-content: space-around;
+  }
+  header .menu-toggle,
+  header nav {
+    display: flex;
+  }
+
+  .label-company {
+    margin: 0;
+  }
+
+  .logo-company {
+    display: none;
+  }
+
+  header nav ul {
+    align-items: center;
+    background-color: #2fbc54;
+    flex-direction: column;
+    height: 40vh;
+    justify-content: space-around;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 70px;
+    transform: translateX(0);
+    transition: all 2s;
+    width: 100%;
+    z-index: -1;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  header nav ul li {
+    padding-top: 5px;
+    /* padding-right: 100px; */
+  }
+
+  header nav ul.slide {
+    opacity: 1;
+    transform: translateX(100);
+    transition: all 2s;
+  }
+  .luruskan-table,
+  .one-card,
+  .three-card,
+  .two-card {
+    z-index: -2;
+  }
+  .gambar-kedua,
+  .gambar-ketiga,
+  .gambar-pertama {
+    width: 90%;
+    z-index: -2;
+  }
+}
